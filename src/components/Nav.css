@@ -1,0 +1,337 @@
+@keyframes fade_in { 
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade_out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  height: 1.875rem;
+  z-index: 1;
+  justify-content: space-between;
+  padding: 1.25rem;
+  transition-timing-function: ease-in;
+  transition: all .7s;
+  backdrop-filter: blur(1px);
+}
+
+.nav__logo {
+  cursor: pointer;
+  position: fixed;
+  left: 2.5rem;
+  width: 6rem;
+  object-fit: contain;
+}
+
+.nav__avatar {
+  position: fixed;
+  right: 4.5rem;
+  object-fit: contain;
+  cursor: pointer;
+  width: 2rem;
+  top: .95rem;
+}
+
+.nav__black {
+  background-color: #111;
+}
+
+.nav__row {
+  display: flex;
+  position: fixed;
+  left: 9.5rem;
+  top: 1.4rem;
+  color: white;
+  justify-content: space-between;
+}
+
+.nav__home, .nav__series, .nav__films, .nav__news, .nav__list {
+  margin-left: 1.25rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.nav__home:hover, .nav__series:hover, .nav__films:hover, .nav__news:hover, .nav__list:hover {
+  color: lightgray;
+}
+
+.nav__popup__list {
+  position: fixed;
+  top: 3rem;
+}
+
+.nav__popup__show {
+  display: block;
+}
+
+.nav__popup__list > h5 {
+  display: none;
+  margin-bottom: .5rem;
+}
+
+.nav__popup__carret {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  color: white;
+  left: 13.5rem;
+  transform: scaleX(1);
+  transform: scaleY(.45);
+  top: 1.4rem;
+  width: 1rem;
+}
+
+.fa-bell {
+  cursor: pointer;
+  position: fixed;
+  color: white;
+  object-fit: contain;
+  transform: scale(1.4);
+  right: 8rem;
+  top: 1.4rem;
+}
+
+.fa-gift {
+  cursor: pointer;
+  position: fixed;
+  color: white;
+  object-fit: contain;
+  transform: scale(1.8);
+  right: 11.5rem;
+  top: 1.4rem;
+}
+
+.nav__children {
+  cursor: pointer;
+  position: fixed;
+  color: white;
+  right: 14.8rem;
+  top: 1.4rem;
+}
+
+.fa-search {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  color: white;
+  right: 21rem;
+  transform: scale(1.2);
+  top: 1.4rem;
+}
+
+.nav__avatar__carret {
+  cursor: pointer;
+  position: fixed;
+  color: white;
+  right: 2.8rem;
+  transform: scaleX(1);
+  transform: scaleY(.45);
+  top: 1.4rem;
+  width: 1rem;
+}
+
+.search__bar {
+  display: none;
+  width: 30rem;
+  transition-timing-function: all .5s;
+}
+
+.search__bar__input {
+  width: 15rem;
+  position: fixed;
+  top: .9rem;
+  right: 20rem;
+  padding: .5rem 0;
+  border: 1px solid white;
+  caret-color: white;
+}
+
+.search__bar input[type="text"] {
+  background-color : black;
+  color: white;
+  padding-left: 2.5rem;
+  font-size: 1rem;
+}
+
+.search__bar input::placeholder,
+.search__bar input::-webkit-input-placeholder,
+.search__bar input:-ms-input-placeholder {
+  color: lightgray;
+}
+
+.search__bar input:active,
+.search__bar input:active,
+.search__bar input:active {
+  border: 1px solid white;
+}
+
+.search__bar input:focus,
+.search__bar input:focus,
+.search__bar input:focus {
+  outline: none;
+}
+
+.search__barShow {
+  display: block!important;
+}
+
+.second-search {
+  position: fixed;
+  right: 36rem;
+}
+
+.nav__avatar__popup {
+  display: none;
+  position: fixed;
+  right: 3rem;
+  top: 3.85rem;
+  background-color: black;
+  width: 12rem;
+  opacity: .9;
+  border: .5px solid #383838;
+  border-bottom: none;
+}
+
+.nav__avatar__popup__2 {
+  display: none;
+  position: fixed;
+  background-color: black;
+  right: 3rem;
+  top: 19rem;
+  width: 12rem;
+  opacity: .9;
+  border: .5px solid #383838;
+}
+
+.nav__avatar__popup__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__avatar__popup__carret {
+  color: white;
+  position: fixed;
+  right: 5rem;
+  transform: scaleY(.5) rotate(180deg);
+  top: 3rem;
+}
+
+.nav__avatar__popup__row {
+  display: flex;
+}
+
+.nav__avatar__popup__username {
+  color: white;
+  margin: 1.5rem 1rem 0 0;
+  cursor: pointer;
+}
+
+.nav__avatar__popup__user {
+  object-fit: contain;
+  cursor: pointer;
+  width: 2rem;
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+.nav__avatar__popup__profiles {
+  color: white;
+  margin: 1rem 1rem 1rem 1rem;
+  cursor: pointer;
+}
+
+.nav__avatar__popup__2__profiles {
+  color: white;
+  margin: .5rem 1rem 0rem 1rem;
+  cursor: pointer;
+}
+
+.first__element {
+  margin-top: 1rem;
+}
+
+.last__element {
+  margin-bottom: 1rem;
+}
+
+.nav__avatar__popup__show {
+  display: block;
+}
+
+.bell__popup {
+  display: none;
+  position: fixed;
+  right: 7.9rem;
+  top: 3.85rem;
+  width: 25.5rem;
+  height: 20rem;
+  border: 1px solid #383838;
+  overflow-y: scroll;
+}
+
+.bell__popup__carret {
+  color: white;
+  position: fixed;
+  right: 8.1rem;
+  transform: scaleY(.5) rotate(180deg);
+  top: 3rem;
+}
+
+.bell__popup__col {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid lightgray;
+}
+
+.bell__popup__row {
+  display: flex;
+  border-bottom: 1px solid #383838;
+  cursor: pointer;
+  background-color: black;
+  opacity: .9;
+}
+
+.bell__popup__row:hover {
+  opacity: 1;
+}
+
+.bell__popup__posters__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bell__popup__posters {
+  margin: 1rem 1rem 1rem 1rem;
+  object-fit: contain;
+  width: 7rem;
+  border: 1px solid;
+  border-radius: 5%;
+}
+
+.bell__popup__header {
+  color: white;
+  margin-top: 1rem;
+}
+
+.bell__popup__movieName, .bell__popup__movieDate {
+  color: white;
+}
+
+.bell__popup__show {
+  display: block;
+}
+
+@media (max-width: 1080px) {
+  .nav__popup__carret {
+    display: block;
+  }
+  .nav__popup__hide {
+    display: none;
+  }
+ }

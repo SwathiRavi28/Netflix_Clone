@@ -1,0 +1,92 @@
+.row {
+  color: white;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.row > h2 {
+  margin-left: 20px;
+}
+
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  cursor: pointer;
+  object-fit: contain;
+  width: 100vw;
+  max-height: 10vw;
+  transition: transform 500ms;
+  margin-right: .5rem;
+  box-sizing: border-box;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 25vw;
+  box-sizing: border-box;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
+
+.row__popup {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.switchRowleft {
+  display: flex;
+  position: absolute;
+  left: 0;
+  height: 9vw;
+  width: 3vw;
+  max-height: 9vw;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+.switchRowRight {
+  display: flex;
+  position: absolute;
+  right: 0;
+  height: 9vw;
+  width: 3vw;
+  max-height: 9vw;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+.switchLargeRow {
+  height: 24vw;
+  max-height: 24vw;
+}
+
+.switch {
+  display: none;
+  cursor: pointer;
+  transition: all ease 300ms;
+  transform: scaleY(3) scale(2);
+  color: lightgray;
+}
+
+.switch:hover {
+  transform: scaleY(2.8) scale(2.8);
+}
